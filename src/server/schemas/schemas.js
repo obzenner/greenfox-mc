@@ -1,12 +1,14 @@
-const { buildSchema } = require('graphql');
+const { graphql, buildSchema } = require('graphql');
 
 module.exports = {
 	helloWorld: {
-		name: 'helloWorld',
 		schema: buildSchema(`
 			type Query {
 				hello: String
 			}
-		`)
+		`),
+		async query(query) {
+			return await graphql(this.schema, query);
+		}
 	}
 }

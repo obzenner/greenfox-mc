@@ -3,6 +3,8 @@ Feature: Store
   and pass a query to it
 
 Scenario: Get a schema
-  When I pass "helloWorld"
-  Then I get "helloWorld" schema object
+  When I pass "helloWorld", I get a schema object
+
+Scenario: Query a schema
+  When I pass "{ hello }" query to "helloWorld" schema, I get a promise
 
