@@ -6,7 +6,6 @@ export default function () {
 	this.When(/^I pass "([^"]*)", I get a schema object$/, function (schemaName) {
 		const store = this.container.get('store');
 		const schema = store.getSchema(schemaName);
-
 		expect(schema).to.not.eql(null);
 	});
 

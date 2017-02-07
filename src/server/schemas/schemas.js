@@ -1,4 +1,4 @@
-const { graphql, buildSchema } = require('graphql');
+const { buildSchema } = require('graphql');
 
 module.exports = {
 	helloWorld: {
@@ -6,9 +6,6 @@ module.exports = {
 			type Query {
 				hello: String
 			}
-		`),
-		async query(query) {
-			return await graphql(this.schema, query);
-		}
+		`)
 	}
 }
