@@ -7,6 +7,16 @@ require("babel-polyfill");
 const express = require('express');
 const app = express();
 
+setupConfig(container.get('config'));
+
+function setupConfig(config) {
+  config.update('cache', 'memory');
+  config.update('mongo', {
+    type: 'memory',
+    url: 'mongodb://localhost:27017/prod'
+  });
+}
+
 const bodyParser = require('body-parser')
 app.use(bodyParser.json());
 
