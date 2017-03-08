@@ -23,6 +23,7 @@
       "patterns": [
         "**"
       ],
+      "quiet": true,
       "extensions": [
         "js",
         "json",
@@ -67,6 +68,7 @@
     "webpack": "1.13.3"
   },
   "dependencies": {
+    "amqplib": "0.5.1",
     "babel-polyfill": "6.16.0",
     "body-parser": "1.15.2",
     "dotenv": "4.0.0",
